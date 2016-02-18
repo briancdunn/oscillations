@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-10">
+            <div class="row">
+                <button type="button" ng-click="addOscillator()">Add Oscillator</button>
+                <button type="button" ng-click="addAmp()">Add Amplifier</button>
+                <button type="button" ng-click="addFilter()">Add Filter</button>
+            </div>
+            <oscillators main-out="mainOut" oscillators="oscillators" amps="amps" filters="filters">
+            </oscillators>
+            <amps main-out="mainOut" oscillators="oscillators" amps="amps" filters="filters">
+            </amps>
+            <filters main-out="mainOut" oscillators="oscillators" amps="amps" filters="filters">
+            </filters>
+            <keyboard oscillators="oscillators" amps="amps" filters="filters">
+            </keyboard>
+        </div>
+        <div class="col-xs-2">
+            <main-out main-out="mainOut.module">
+            </main-out>
+        </div>
+    </div>
+</div>

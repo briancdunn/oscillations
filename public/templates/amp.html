@@ -1,0 +1,15 @@
+<div class="amp col-xs-2">
+    <form class="form-inline" novalidate>
+        <fieldset>
+            <div class="row">
+                <label>{{ amp.name }}</label>
+            </div>
+            <div class="row">
+                <label>Gain</label><input type="number" ng-model="amp.module.gain.value" ng-min="-1" ng-max="500"/>
+            </div>
+            <div class="row">
+                <label>Output</label><select name="output" ng-options="output as output.name for output in outputs track by output.id" ng-model="output" ng-change="changeOutput()"></select>
+            </div>
+        </fieldset>
+    </form>
+</div>

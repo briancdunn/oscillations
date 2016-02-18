@@ -1,0 +1,32 @@
+<div>
+<!--     <div class="row">
+        <h4>Keyboard</h4>
+    </div> -->
+    <div class="row preformatted" id="keys">
+ _______________________________________  
+|  | | | |  |  | | | | | |  |  | | | |  | 
+|  | | | |  |  | | | | | |  |  | | | |  | 
+|  |W| |E|  |  |T| |Y| |U|  |  |O| |P|  | 
+|  |_| |_|  |  |_| |_| |_|  |  |_| |_|  | 
+|   |   |   |   |   |   |   |   |   |   | 
+| A | S | D | F | G | H | J | K | L | ; | 
+|___|___|___|___|___|___|___|___|___|___| 
+    </div>
+    <div class="row">
+        <label>Octave</label><select ng-model="octave" ng-change="changeFrequency()">
+            <option value=-4>0</option>
+            <option value=-3>1</option>
+            <option value=-2>2</option>
+            <option value=-1>3</option>
+            <option value=0 selected>4</option>
+            <option value=1>5</option>
+            <option value=2>6</option>
+            <option value=3>7</option>
+            <option value=4>8</option>
+        </select>
+    </div>
+    <div class="row">
+        <label>Freq Output</label><select ng-options="output as output.name for output in outputs track by output.id" ng-model="freqOutput" ng-change="changeFreqOutput()"></select>
+        <label>Gain Output</label><select ng-options="output as output.name for output in outputs track by output.id" ng-model="gainOutput" ng-change="changeGainOutput()"></select>
+    </div>
+</div>
